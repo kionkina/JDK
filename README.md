@@ -1,5 +1,4 @@
-# DLDeque
----
+# DLDeque ---
 ## Team JDK: Judy Liu, David Frid, Karina Ionkina
 
 ### Method Selections
