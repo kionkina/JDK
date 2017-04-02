@@ -1,4 +1,4 @@
-# DLDeque
+# DLLDeque
 ---
 ## Team JDK: Judy Liu, David Frid, Karina Ionkina
 
