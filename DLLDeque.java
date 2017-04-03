@@ -23,7 +23,7 @@ public class DLLDeque<T>{
 
 //~~~~~~~~~~~~~ methods for Front of Deque ~~~~~~~~~~~~                                        
 
-    /*-------------------------------------------------------
+    /*------------------------addFront-----------------------
     **Adds element to the front by linking a new node to the
     **front of the list.                  
     -------------------------------------------------------*/
@@ -38,7 +38,7 @@ public class DLLDeque<T>{
 	}
 	_size++;
     }
-/*-------------------------------------------------------
+/*------------------------------removeFront------------------
     **Removes element from the front by setting the _front to
     **_front.getNext() and setting the previous of the node 
     ** ahead to null
@@ -62,7 +62,7 @@ public class DLLDeque<T>{
 
     //~~~~~~~~~~~~ methods for the End of Deque ~~~~~~~~~~~                                         
 
-    /*-------------------------------------------------------
+    /*------------------------addEnd-------------------------
     **Adds element to the end by linking a last node to 
     ** a new node whose cargo is x. 
     -------------------------------------------------------*/
@@ -80,7 +80,7 @@ public class DLLDeque<T>{
 	_size ++;
     }
 
-    /*-------------------------------------------------------
+    /*---------------------removeEnd------------------------
     ** The second to last element's getNext is set to null
     ** and _end points to that element.
     -------------------------------------------------------*/
@@ -118,16 +118,23 @@ public class DLLDeque<T>{
     }
     public static void main(String[] args){
 	DLLDeque<String> test = new DLLDeque<String>();
+	test.addEnd("boop");
+	System.out.println(test.peekEnd());
 	test.addFront("hello4");
+	System.out.println(test);
 	test.addFront("hello3");
+	//System.out.println(
+	System.out.println(test);
 	//test.removeFront();
 	test.addEnd("hello5");
+	System.out.println(test);
 	test.addEnd("oops");
-
+	System.out.println(test);
 	test.addFront("hello2");
+	System.out.println(test);
 	test.addFront("hello1");
 	test.removeEnd();
-	System.out.println(test);
-	}
+	System.out.println(test.peekEnd());
+       	}
 
 }
