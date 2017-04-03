@@ -1,3 +1,14 @@
+/* Team JDK -- Judy Liu, David Frid, Karina Ionkina
+   APCS2 pd05
+   Lab 02 -- Synecdoche
+   2017- 04- 03 */
+
+/*------------------------Deque Class------------------------
+** Implementation to a double ended queue. It uses a 
+** doubly linked nodes as its container 
+  -----------------------------------------------------------*/
+
+
 public class DLLDeque<T>{
 
     private DLLNode<T> _front;
@@ -10,8 +21,12 @@ public class DLLDeque<T>{
 	_end = null;
     }
 
-//~~~~~~~~~~~~~ methods for Front of Deque ~~~~~~~~~~~~                                         
-//adds element to the front                                                                     
+//~~~~~~~~~~~~~ methods for Front of Deque ~~~~~~~~~~~~                                        
+
+    /*-------------------------------------------------------
+    **Adds element to the front by linking a new node to the
+    **front of the list.                  
+    -------------------------------------------------------*/
     public void addFront(T x){
 	if(isEmpty()){
 	    _front = new DLLNode<T>(x, null, null);
@@ -23,6 +38,11 @@ public class DLLDeque<T>{
 	}
 	_size++;
     }
+/*-------------------------------------------------------
+    **Removes element from the front by setting the _front to
+    **_front.getNext() and setting the previous of the node 
+    ** ahead to null
+    -------------------------------------------------------*/
 
     public T removeFront(){
 	if(isEmpty()){
@@ -42,6 +62,11 @@ public class DLLDeque<T>{
 
     //~~~~~~~~~~~~ methods for the End of Deque ~~~~~~~~~~~                                         
 
+    /*-------------------------------------------------------
+    **Adds element to the end by linking a last node to 
+    ** a new node whose cargo is x. 
+    -------------------------------------------------------*/
+
     public void addEnd(T x){
 	if (isEmpty()){
 	    _end = new DLLNode<T>(x,null, null);
@@ -54,7 +79,13 @@ public class DLLDeque<T>{
 	}
 	_size ++;
     }
-    public T removeEnd(){
+
+    /*-------------------------------------------------------
+    ** The second to last element's getNext is set to null
+    ** and _end points to that element.
+    -------------------------------------------------------*/
+  
+  public T removeEnd(){
 	if (isEmpty()){
 	    return null;
 	}
@@ -85,16 +116,18 @@ public class DLLDeque<T>{
 	return retStr;
 	
     }
-    /*public static void main(String[] args){
+    public static void main(String[] args){
 	DLLDeque<String> test = new DLLDeque<String>();
-	test.addFront("hello");
-	test.addFront("hello1");
+	test.addFront("hello4");
+	test.addFront("hello3");
 	//test.removeFront();
-	test.addEnd("hello3");
-	test.addEnd("hello3");
+	test.addEnd("hello5");
+	test.addEnd("oops");
+
+	test.addFront("hello2");
 	test.addFront("hello1");
 	test.removeEnd();
 	System.out.println(test);
-	}*/
+	}
 
 }
