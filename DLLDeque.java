@@ -101,6 +101,10 @@ public class DLLDeque<T>{
     public T peekEnd(){
 	return _end.getCargo();
     }
+	
+    public int size(){
+	    return _size();
+    }
 
 
     public boolean isEmpty(){
