@@ -2,7 +2,7 @@
 ---
 ## Team JDK: Judy Liu, David Frid, Karina Ionkina
 ### Rationale for method selections:
-The doubly-linked queue should have "enqueue", "dequeue" and "peek" capabilities on either end.
+The doubly-linked queue should have "enqueue", "dequeue" and "peek" capabilities on either end. The methods we chose allow for adding and removing elements in both directions.
 
 
 ### Methods
@@ -20,5 +20,7 @@ The doubly-linked queue should have "enqueue", "dequeue" and "peek" capabilities
   * Returns the element at the end of the deque
 7. public boolean isEmpty()
   * Returns true if the first element is null
+ 8. public int size()
+  * Returns number of elements present 
 ### Rationale for Doubly-linked Node-based Architecture
 Our team choose doubly-linked Node-based architecture for Deque because Deque is a double ended queue. The instance variables nextNode and prevNode and their methods from the doubly-linked nodes would be useful in adding, removing, and peeking from the front or end of the queue.
