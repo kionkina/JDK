@@ -16,6 +16,8 @@ public interface Deque<T>{
     public T removeEnd();
 
     public T peekEnd();
+    
+    public int size();
 
     
     public boolean isEmpty();
