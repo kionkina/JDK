@@ -103,7 +103,7 @@ public class DLLDeque<T>{
     }
 	
     public int size(){
-	    return _size();
+	    return _size;
     }
 
 
