@@ -22,8 +22,8 @@ public class DequeTester {
 	System.out.println( stringDeque ); // a b c
 	System.out.println( "\nRemoving elements..." );
 	// a and c should be removed from the deque
-       	stringDeque.removeFirst();
-	//stringDeque.removeLast();
+	stringDeque.removeFirst();
+	stringDeque.removeLast();
 	System.out.println( stringDeque ); // b
 	System.out.println( "\nRemoving remaining element..." );
 	// b should be removed from the deque
@@ -40,7 +40,7 @@ public class DequeTester {
 	System.out.println( "\nGetting first element..." );
 	// should print exception if exceptions are handled
 	try {
-	    stringDeque.peekFirst(); //error
+	    stringDeque.getFirst(); //error
 	} catch (NoSuchElementException e) {
 	    e.printStackTrace(); //prints error message
 	}
@@ -50,7 +50,7 @@ public class DequeTester {
 	stringDeque.addFirst( "a" );
 	System.out.println( "\nGetting first element..." );
 	// a should be printed
-	System.out.println( stringDeque.peekFirst() + "\n" ); // a
+	System.out.println( stringDeque.getFirst() + "\n" ); // a
 
 
 	// Test using deque of Objects

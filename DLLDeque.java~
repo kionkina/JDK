@@ -27,13 +27,13 @@ public class DLLDeque<T>{
     **Adds element to the front by linking a new node to the
     **front of the list.                  
     -------------------------------------------------------*/
-    public void addFirst(T x){
+    public void addFront(T x){
 	if(isEmpty()){
 	    _front = new DLLNode<T>(x, null, null);
 	    _end = _front;
 	 	}
 	else {
-	    DLLNode<T> bob = new DLLNode<T>(x, null, _front);
+	    DLLNode bob = new DLLNode<T>(x, null,_front);
 	    _front = bob;
 	}
 	_size++;
@@ -44,21 +44,18 @@ public class DLLDeque<T>{
     ** ahead to null
     -------------------------------------------------------*/
 
-    public T removeFirst(){
-	if(isEmpty()){
-	    throw new IndexOutOfBoundsException("Emmmpppptttyyyy");
-	}
-	T ret = _front.getCargo();
-	_front = _front.getNext();
-	// _front.setPrev(null); // why does this have to be removed? 
-	_size-- ;
-	return ret;
-    }
-
-    public T peekFirst(){
+    public T removeFront(){
 	if(isEmpty()){
 	    return null;
 	}
+	T ret = _front.getCargo();
+	_front = _front.getNext();
+	_front.setPrev(null);
+	_size --;
+	return ret;
+    }
+
+    public T peekFront(){
 	return _front.getCargo();
     }
 
@@ -70,7 +67,7 @@ public class DLLDeque<T>{
     ** a new node whose cargo is x. 
     -------------------------------------------------------*/
 
-    public void addLast(T x){
+    public void addEnd(T x){
 	if (isEmpty()){
 	    _end = new DLLNode<T>(x,null, null);
 	    _front = _end;
@@ -88,9 +85,9 @@ public class DLLDeque<T>{
     ** and _end points to that element.
     -------------------------------------------------------*/
   
-  public T removeLast(){
-      	if(isEmpty()){
-	    throw new IndexOutOfBoundsException("Emmmpppptttyyyy");
+  public T removeEnd(){
+	if (isEmpty()){
+	    return null;
 	}
 	else{
 	    T ret = _end.getCargo();
@@ -101,10 +98,7 @@ public class DLLDeque<T>{
 	}
     }
 
-    public T peekLast(){
-	if (isEmpty()){
-	    return null;
-	}
+    public T peekEnd(){
 	return _end.getCargo();
     }
 	
@@ -127,7 +121,7 @@ public class DLLDeque<T>{
 	
     }
     public static void main(String[] args){
-	/*	DLLDeque<String> test = new DLLDeque<String>();
+	DLLDeque<String> test = new DLLDeque<String>();
 	test.addEnd("boop");
 	System.out.println(test.peekEnd());
 	test.addFront("hello4");
@@ -145,7 +139,6 @@ public class DLLDeque<T>{
 	test.addFront("hello1");
 	test.removeEnd();
 	System.out.println(test.peekEnd());
-       	} */
-    }
+       	}
 
 }
