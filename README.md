@@ -6,11 +6,11 @@ The doubly-linked queue should have "enqueue", "dequeue" and "peek" capabilities
 
 
 ### Methods
-1. public void addFront(T x) 
+1. public void addFirst(T x) 
   * Adds the element to the front of the deque
-2. public T removeFront()
-  * Removes the element at the front of the deque and returns the removed element
-3. public T peekFront()
+2. public T removeFirst()
+  * Removes the element at the front of the deque and returns the removed element and throws error if empty
+3. public T peekFirst()
   * Returns the element at the front of the deque
 4. public void addEnd(T x)
   * Adds the element to the end of the deque
