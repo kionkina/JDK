@@ -12,11 +12,11 @@ The doubly-linked queue should have "enqueue", "dequeue" and "peek" capabilities
   * Removes the element at the front of the deque and returns the removed element and throws error if empty
 3. public T peekFirst()
   * Returns the element at the front of the deque
-4. public void addEnd(T x)
+4. public void addLast(T x)
   * Adds the element to the end of the deque
-5. public T removeEnd()
-  * Removes the element at the end of the deque and returns the removed element
-6. public T peekEnd()
+5. public T removeLast()
+  * Removes the element at the end of the deque and returns the removed element and throws error if empty
+6. public T peekLast()
   * Returns the element at the end of the deque
 7. public boolean isEmpty()
   * Returns true if the first element is null
